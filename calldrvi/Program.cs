@@ -20,8 +20,6 @@ namespace calldrvi
             // объединяем все аргументы в одну строку с пробелами
             string command = string.Join(" ", args);
 
-//            Console.WriteLine(string.Format("Команда: {0}", command));
-
             try
             {
                 using (NamedPipeClientStream pipe = new NamedPipeClientStream(".", pipeName, PipeDirection.InOut))
@@ -56,5 +54,4 @@ namespace calldrvi
             }
         }
     }
-
 }
